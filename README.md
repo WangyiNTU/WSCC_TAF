@@ -1,8 +1,10 @@
 
-# TransCrowd
-* An officical implementation of TransCrowd: Weakly-Supervised Crowd Counting with Transformer. To the best of our knowledge, this is the ﬁrst work to adopt a pure Transformer for crowd counting research. We observe that the proposed TransCrowd can eﬀectively extract the semantic crowd information by using the self-attention mechanism of Transformer.
+# A Simple and Effective Baseline
+* An officical implementation of weakly-supervised crowd counting with token attention and fusion. Our work presents a simple and effective crowd counting method with only image-level count annotations,
+i.e., the number of people in an image (weak supervision).We investigate three backbone networks regarding transfer learning capacity in the weakly supervised crowd counting problem. Then, we propose an effective network composed of a Transformer backbone and token channel attention module (T-CAM) in the counting head, where the attention in channels of tokens can compensate for the self-attention between tokens of the Transformer. Finally, a simple token fusion is proposed to obtain
+global information.
 
-* Paper [Link](https://arxiv.org/abs/2104.09116)
+* Paper [Link](https://ieeexplore.ieee.org/document/10446636)
 ## Overview
 ![avatar](./image/overview.png)
 
@@ -45,6 +47,8 @@ run python make_npydata.py
 ```
 python train.py --dataset ShanghaiA  --save_path ./save_file/ShanghaiA --batch_size 24 --model_type 'token' 
 python train.py --dataset ShanghaiA  --save_path ./save_file/ShanghaiA batch_size 24 --model_type 'gap'
+python train.py --dataset ShanghaiA  --save_path ./save_file/ShanghaiA batch_size 24 --model_type 'swin'
+python train.py --dataset ShanghaiA  --save_path ./save_file/ShanghaiA batch_size 24 --model_type 'mamba'
 ```
 Please utilize a single GPU with 24G memory or multiple GPU for training. On the other hand, you also can change the batch size.
 
@@ -55,15 +59,18 @@ Download the pretrained model from [Baidu-Disk](https://pan.baidu.com/s/1OJZmZfD
 
 ```
 python test.py --dataset ShanghaiA  --pre model_best.pth --model_type 'gap'
+...
 ```
 
 # Reference
 If you find this project is useful for your research, please cite:
 ```
-@article{liang2021transcrowd,
-  title={TransCrowd: Weakly-Supervised Crowd Counting with Transformer},
-  author={Liang, Dingkang and Chen, Xiwu and Xu, Wei and Zhou, Yu and Bai, Xiang},
-  journal={arXiv preprint arXiv:2104.09116},
-  year={2021}
+@inproceedings{wang2024weakly,
+  title={Weakly-Supervised Crowd Counting with Token Attention and Fusion: A Simple and Effective Baseline},
+  author={Wang, Yi and Hu, Qiongyang and Chau, Lap-Pui},
+  booktitle={ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={13456--13460},
+  year={2024},
+  organization={IEEE}
 }
 ```
