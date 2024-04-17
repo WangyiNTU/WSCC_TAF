@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="wangyi@chfa-isrl-gpu.dynip.ntu.edu.sg:22" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="wangyi@chfa-isrl-gpu.dynip.ntu.edu.sg:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/TransCrowd/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/TransCrowd/output" />
+            <excludedPath path="/TransCrowd/pretrained" />
+            <excludedPath path="/TransCrowd/Networks/deit_base_patch16_384-8de9b5d1.pth" />
+            <excludedPath path="/TransCrowd/Networks/swin_base_patch4_window12_384.pth" />
+            <excludedPath path="/TransCrowd/Networks/swin_tiny_patch4_window7_224.pth" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
