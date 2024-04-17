@@ -1,5 +1,5 @@
 
-# Weakly-supervised crowd counting with token attention and fusion: A Simple and Effective Baseline
+# Weakly-supervised crowd counting with token attention and fusion: A Simple and Effective Baseline (ICASSP 2024)
 * An officical implementation of WSCC_TAF: weakly-supervised crowd counting with token attention and fusion. Our work presents a simple and effective crowd counting method with only image-level count annotations, i.e., the number of people in an image (weak supervision).We investigate three backbone networks regarding transfer learning capacity in the weakly supervised crowd counting problem. Then, we propose an effective network composed of a Transformer backbone and token channel attention module (T-CAM) in the counting head, where the attention in channels of tokens can compensate for the self-attention between tokens of the Transformer. Finally, a simple token fusion is proposed to obtain global information.
 
 * Paper [Link](https://ieeexplore.ieee.org/document/10446636)
