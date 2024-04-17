@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # A Simple and Effective Baseline
 * An officical implementation of WSCC_TAF: weakly-supervised crowd counting with token attention and fusion. Our work presents a simple and effective crowd counting method with only image-level count annotations,
