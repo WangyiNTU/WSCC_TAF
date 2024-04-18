@@ -1,12 +1,23 @@
 
 # A Simple and Effective Baseline
-* An officical implementation of WSCC_TAF: weakly-supervised crowd counting with token attention and fusion. Our work presents a simple and effective crowd counting method with only image-level count annotations,
+* An officical implementation of weakly-supervised crowd counting with token attention and fusion. Our work presents a simple and effective crowd counting method with only image-level count annotations,
 i.e., the number of people in an image (weak supervision).We investigate three backbone networks regarding transfer learning capacity in the weakly supervised crowd counting problem. Then, we propose an effective network composed of a Transformer backbone and token channel attention module (T-CAM) in the counting head, where the attention in channels of tokens can compensate for the self-attention between tokens of the Transformer. Finally, a simple token fusion is proposed to obtain
 global information.
 
 * Paper [Link](https://ieeexplore.ieee.org/document/10446636)
 ## Overview
 ![avatar](./image/overview.png)
+
+# Comparison between four backbone networks on Part_A of the ShanghaiTech dataset
+| Backbone | MAE | MSE | 
+|:---------:| :----------:|:-------:| 
+EfficientNet-B7 |76.4 | 115.0 
+ViT-B-384 | 72.6 | 123.4 
+Swin_B-384 | 67.0 | 108.5 
+Mamba | 71.7 | 122.8 
+
+# Backbone of mamba
+- Code refers to [here](https://github.com/hustvl/Vim)
 
 # Environment
 
